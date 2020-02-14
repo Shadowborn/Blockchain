@@ -12,7 +12,7 @@ class Blockchain(object):
         self.current_transactions = []
 
         # Create the genesis block
-        self.new_block(previous_hash=1, proof=100)
+        self.new_block(previous_hash="SAY WHUT random string", proof=100)
 
     def new_block(self, proof, previous_hash=None):
         """
@@ -119,6 +119,7 @@ def mine():
 
     response = {
         # TODO: Send a JSON response with the new block
+        "message": "Hello world!"
     }
 
     return jsonify(response), 200
